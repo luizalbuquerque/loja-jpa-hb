@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="loja_PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.portuga.gymnasium.model.bo.Cidade</class>
+    <class>com.portuga.gymnasium.model.bo.Bairro</class>
+    <class>com.portuga.gymnasium.model.bo.Tamanho</class>
+    <class>com.portuga.gymnasium.model.bo.Marca</class>
+    <class>com.portuga.gymnasium.model.bo.Produto</class>
+    <class>com.portuga.gymnasium.model.bo.Endereco</class>
+    <class>com.portuga.gymnasium.model.bo.Bairro</class>
+    <class>com.portuga.gymnasium.model.bo.CondicaoPagamento</class>
+    <class>com.portuga.gymnasium.model.bo.TipoProduto</class>
+    <class>com.portuga.gymnasium.model.bo.Venda</class>
+    <class>com.portuga.gymnasium.model.bo.Vendedor</class>
+    <class>com.portuga.gymnasium.model.bo.Cliente</class>
+    <class>com.portuga.gymnasium.model.bo.Pessoa</class>
+    <class>com.portuga.gymnasium.model.bo.EstoqueProduto</class>
+    <class>com.portuga.gymnasium.model.bo.ItemVenda</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/LojaTuga?zeroDateTimeBehavior=CONVERT_TO_NULL&amp;useTimezone=true&amp;serverTimezone=UTC&amp;useSSL=false&amp;requireSSL=false"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="Luiz@$$2018"/>
+    </properties>
+  </persistence-unit>
+</persistence>
