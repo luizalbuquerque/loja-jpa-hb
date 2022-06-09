@@ -21,8 +21,8 @@ import javax.swing.JTextField;
 public class ControllerCadEndereco implements ActionListener {
 
     public static int codigo;
-    private TelaCadEndereco tela;
-
+    TelaCadEndereco tela;
+    
     public ControllerCadEndereco(TelaCadEndereco tela) {
         this.tela = tela;
         this.tela.getjButtonBuscar().addActionListener(this);

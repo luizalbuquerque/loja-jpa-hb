@@ -6,19 +6,22 @@ import com.portuga.gymnasium.view.TelaBusMarca;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 
 public class ControllerBusMarca implements ActionListener {
     
     private TelaBusMarca tela;
+    private DefaultTableModel tabela;
 
     public ControllerBusMarca(TelaBusMarca tela) {
         this.tela = tela;
+        tela.getjButtonCarregar().addActionListener(this);
+        tela.getjButtonSair().addActionListener(this);
+        tabela = (DefaultTableModel) this.tela.getjTable1().getModel();
         this.tela.getjButtonCarregar().addActionListener(this);
-        
-        DefaultTableModel tabela = (DefaultTableModel) this.tela.getjTable1().getModel();
-        
+
         MarcaService service = new MarcaService();
         for (Marca item : service.buscar()) {
             tabela.addRow(
@@ -28,6 +31,20 @@ public class ControllerBusMarca implements ActionListener {
                 }
             );
         }
+        
+                tela.getjButtonDeletar().addActionListener(a -> apaga());
+    }
+    
+    private void apaga() {
+        if (tela.getjTable1().getSelectedRow() < 0) {
+            return;
+        }
+            JTable table = tela.getjTable1();
+        int selectedRow = table.getSelectedRow();
+        int idMarca = Integer.valueOf(table.getValueAt(selectedRow, 0).toString());
+        new MarcaService().apagar(new MarcaService().buscar(idMarca));
+        DefaultTableModel model = (DefaultTableModel) table.getModel();
+        model.removeRow(selectedRow);
     }
 
     @Override

@@ -10,7 +10,7 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.5.0:exec</goal>
             </goals>
             <properties>
-                <exec.args>-classpath %classpath com.mycompany.luciano.view.MenuPrincipal</exec.args>
+                <exec.args>-classpath %classpath com.portuga.gymnasium.view.MenuPrincipal</exec.args>
                 <exec.executable>java</exec.executable>
             </properties>
         </action>

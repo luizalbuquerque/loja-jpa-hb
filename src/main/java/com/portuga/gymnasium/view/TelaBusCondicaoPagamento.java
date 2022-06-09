@@ -33,6 +33,7 @@ public class TelaBusCondicaoPagamento extends javax.swing.JDialog {
         jPanelBotoes = new javax.swing.JPanel();
         jButtonSair = new javax.swing.JButton();
         jButtonCarregar = new javax.swing.JButton();
+        jButtonDeletar = new javax.swing.JButton();
         jPanelDados = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -48,7 +49,7 @@ public class TelaBusCondicaoPagamento extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 0, 153));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Condiï¿½ï¿½es de Pagamento");
+        jLabel1.setText("Condições de Pagamento");
 
         javax.swing.GroupLayout jPanelTituloLayout = new javax.swing.GroupLayout(jPanelTitulo);
         jPanelTitulo.setLayout(jPanelTituloLayout);
@@ -76,6 +77,14 @@ public class TelaBusCondicaoPagamento extends javax.swing.JDialog {
 
         jButtonCarregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Find.png"))); // NOI18N
         jButtonCarregar.setText("Carregar");
+        jButtonCarregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCarregarActionPerformed(evt);
+            }
+        });
+
+        jButtonDeletar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Delete.png"))); // NOI18N
+        jButtonDeletar.setText("Deletar");
 
         javax.swing.GroupLayout jPanelBotoesLayout = new javax.swing.GroupLayout(jPanelBotoes);
         jPanelBotoes.setLayout(jPanelBotoesLayout);
@@ -88,12 +97,22 @@ public class TelaBusCondicaoPagamento extends javax.swing.JDialog {
                 .addGroup(jPanelBotoesLayout.createSequentialGroup()
                     .addComponent(jButtonCarregar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 450, Short.MAX_VALUE)))
+            .addGroup(jPanelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelBotoesLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jButtonDeletar)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelBotoesLayout.setVerticalGroup(
             jPanelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jButtonSair, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
             .addGroup(jPanelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jButtonCarregar, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
+            .addGroup(jPanelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelBotoesLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jButtonDeletar)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         getContentPane().add(jPanelBotoes, java.awt.BorderLayout.PAGE_END);
@@ -105,7 +124,7 @@ public class TelaBusCondicaoPagamento extends javax.swing.JDialog {
 
             },
             new String [] {
-                "Id", "Descriï¿½ï¿½o", "Dias Primeira Parcela", "Dias Entre Parcelas"
+                "Id", "Descrição", "Dias Primeira Parcela", "Dias Entre Parcelas"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -147,6 +166,10 @@ public class TelaBusCondicaoPagamento extends javax.swing.JDialog {
         this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_jButtonSairActionPerformed
+
+    private void jButtonCarregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCarregarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonCarregarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -195,6 +218,7 @@ public class TelaBusCondicaoPagamento extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCarregar;
+    private javax.swing.JButton jButtonDeletar;
     private javax.swing.JButton jButtonSair;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanelBotoes;
@@ -215,4 +239,10 @@ public class TelaBusCondicaoPagamento extends javax.swing.JDialog {
     public javax.swing.JTable getjTable1() {
         return jTable1;
     }
+    
+        public javax.swing.JButton getjButtonDeletar() {
+        return jButtonDeletar;
+    }
+        
+    
 }

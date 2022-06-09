@@ -10,32 +10,48 @@ import com.portuga.gymnasium.view.TelaBusBairro;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 
 /**
  *
- * @author JACKSON
+ * @author Team Marcos / José / Luiz
  */
 public class ControllerBusBairro implements ActionListener {
     
     TelaBusBairro tela;
+    private DefaultTableModel tabela;
 
     public ControllerBusBairro(TelaBusBairro tela) {
         this.tela = tela;
+        tela.getjButtonCarregar().addActionListener(this);
+        tela.getjButtonSair().addActionListener(this);
+        tabela = (DefaultTableModel) this.tela.getjTable1().getModel();
         this.tela.getjButtonCarregar().addActionListener(this);
+        //DefaultTableModel tabela = (DefaultTableModel) this.tela.getjTable1().getModel();
         
-        DefaultTableModel tabela = (DefaultTableModel) this.tela.getjTable1().getModel();
-        
-        BairroService service = new BairroService();
-        for (Bairro bairro : service.buscar()) {
-            tabela.addRow(
-                new Object[]{
-                    bairro.getIdBairro(),
-                    bairro.getDescricaoBairro()
-                }
-            );
+        BairroService bairroService = new BairroService();
+        for (Bairro bairroAtualDaLista : bairroService.buscar()) {
+            tabela.addRow(new Object[]{ bairroAtualDaLista.getIdBairro(),
+                    bairroAtualDaLista.getDescricaoBairro(),
+                    bairroAtualDaLista.getDescricaoBairro() });
         }
+
+        tela.getjButtonDeletar().addActionListener(a -> apaga());
+    }
+    
+        private void apaga() {
+        if (tela.getjTable1().getSelectedRow() < 0) {
+            return;
+        }
+
+            JTable table = tela.getjTable1();
+        int selectedRow = table.getSelectedRow();
+        int idBairro = Integer.valueOf(table.getValueAt(selectedRow, 0).toString());
+        new BairroService().apagar(new BairroService().buscar(idBairro));
+        DefaultTableModel model = (DefaultTableModel) table.getModel();
+        model.removeRow(selectedRow);
     }
 
     @Override

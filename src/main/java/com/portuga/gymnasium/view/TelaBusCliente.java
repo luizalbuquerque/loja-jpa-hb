@@ -33,6 +33,7 @@ public class TelaBusCliente extends javax.swing.JDialog {
         jPanelBotoes = new javax.swing.JPanel();
         jButtonSair = new javax.swing.JButton();
         jButtonCarregar = new javax.swing.JButton();
+        jButtonDeletar = new javax.swing.JButton();
         jPanelDados = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -77,6 +78,14 @@ public class TelaBusCliente extends javax.swing.JDialog {
         jButtonCarregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Find.png"))); // NOI18N
         jButtonCarregar.setText("Carregar");
 
+        jButtonDeletar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Delete.png"))); // NOI18N
+        jButtonDeletar.setText("Deletar");
+        jButtonDeletar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDeletarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanelBotoesLayout = new javax.swing.GroupLayout(jPanelBotoes);
         jPanelBotoes.setLayout(jPanelBotoesLayout);
         jPanelBotoesLayout.setHorizontalGroup(
@@ -88,12 +97,22 @@ public class TelaBusCliente extends javax.swing.JDialog {
                 .addGroup(jPanelBotoesLayout.createSequentialGroup()
                     .addComponent(jButtonCarregar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 450, Short.MAX_VALUE)))
+            .addGroup(jPanelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelBotoesLayout.createSequentialGroup()
+                    .addGap(225, 225, 225)
+                    .addComponent(jButtonDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(225, Short.MAX_VALUE)))
         );
         jPanelBotoesLayout.setVerticalGroup(
             jPanelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jButtonSair, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
             .addGroup(jPanelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jButtonCarregar, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
+            .addGroup(jPanelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelBotoesLayout.createSequentialGroup()
+                    .addGap(10, 10, 10)
+                    .addComponent(jButtonDeletar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(11, 11, 11)))
         );
 
         getContentPane().add(jPanelBotoes, java.awt.BorderLayout.PAGE_END);
@@ -150,6 +169,10 @@ public class TelaBusCliente extends javax.swing.JDialog {
         this.dispose();
     }//GEN-LAST:event_jButtonSairActionPerformed
 
+    private void jButtonDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeletarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonDeletarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -197,6 +220,7 @@ public class TelaBusCliente extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCarregar;
+    private javax.swing.JButton jButtonDeletar;
     private javax.swing.JButton jButtonSair;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanelBotoes;
@@ -216,5 +240,9 @@ public class TelaBusCliente extends javax.swing.JDialog {
 
     public javax.swing.JTable getjTable1() {
         return jTable1;
+    }
+    
+        public javax.swing.JButton getjButtonDeletar() {
+        return jButtonDeletar;
     }
 }
