@@ -10,6 +10,10 @@ import com.portuga.gymnasium.service.VendedorService;
 import com.portuga.gymnasium.view.TelaBusVendedor;
 import javax.swing.JTable;
 
+/**
+ *
+ * @author Team Marcos / José / Luiz
+ */
 public class ControllerBusVendedor implements ActionListener {
 
     TelaBusVendedor tela;

@@ -9,7 +9,10 @@ import java.awt.event.ActionListener;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-
+/**
+ *
+ * @author Team Marcos / José / Luiz
+ */
 public class ControllerBusCondicaoPagamento implements ActionListener {
 
     TelaBusCondicaoPagamento tela;

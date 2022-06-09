@@ -7,6 +7,10 @@ import com.portuga.gymnasium.service.CidadeService;
 import com.portuga.gymnasium.view.TelaBusCidade;
 import javax.swing.JTable;
 
+/**
+ *
+ * @author Team Marcos / José / Luiz
+ */
 public class ControllerBusCidade implements ActionListener{
     
     TelaBusCidade tela;

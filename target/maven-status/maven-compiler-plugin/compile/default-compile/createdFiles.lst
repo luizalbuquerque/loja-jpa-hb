@@ -60,7 +60,6 @@ com\portuga\gymnasium\view\MenuPrincipal$10.class
 com\portuga\gymnasium\service\EnderecoService.class
 com\portuga\gymnasium\view\TelaBusMarca$2.class
 com\portuga\gymnasium\model\DAO\ConnectionFactory.class
-com\portuga\gymnasium\view\TelaBusEndereco$3$1.class
 com\portuga\gymnasium\view\TelaCadEndereco.class
 com\portuga\gymnasium\controller\ControllerCadEndereco.class
 com\portuga\gymnasium\model\bo\Endereco_.class
@@ -122,6 +121,7 @@ com\portuga\gymnasium\view\ModeloBuscas$2.class
 com\portuga\gymnasium\view\TelaBusCliente.class
 com\portuga\gymnasium\view\TelaCadEndereco$2.class
 com\portuga\gymnasium\model\bo\Venda_.class
+com\portuga\gymnasium\view\TelaBusEndereco$4$1.class
 com\portuga\gymnasium\view\TelaBusCondicaoPagamento$4.class
 com\portuga\gymnasium\view\TelaCadTipoProduto.class
 com\portuga\gymnasium\view\TelaCadProduto$1.class
@@ -142,6 +142,7 @@ com\portuga\gymnasium\model\DAO\VendaDAO.class
 com\portuga\gymnasium\view\MenuPrincipal$19.class
 com\portuga\gymnasium\view\TelaBusTipoProduto$4$1.class
 com\portuga\gymnasium\view\MenuPrincipal$20.class
+com\portuga\gymnasium\view\TelaBusEndereco$4.class
 com\portuga\gymnasium\service\BairroService.class
 com\portuga\gymnasium\view\MenuPrincipal$13.class
 com\portuga\gymnasium\view\MenuPrincipal$2.class

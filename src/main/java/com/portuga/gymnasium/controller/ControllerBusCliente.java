@@ -10,6 +10,10 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 
+/**
+ *
+ * @author Team Marcos / José / Luiz
+ */
 public class ControllerBusCliente implements ActionListener {
 
     private TelaBusCliente tela;
